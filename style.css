@@ -184,9 +184,6 @@ a {
 .site-header .open-full-menu-button span {
   margin-top: 5px;
 }
-.site-header .open-full-menu-button:hover {
-  opacity: 0.7;
-}
 .site-header .scroll-progress {
   align-items: center;
   border-radius: 50%;
@@ -244,9 +241,6 @@ a {
 .site-header .contact-navigation .contact-button span {
   margin-top: 2px;
 }
-.site-header .contact-navigation .contact-button:hover {
-  opacity: 0.7;
-}
 .site-header .contact-navigation .contact-dropdown {
   background-color: rgba(245, 246, 246, 0.7);
   display: none;
@@ -264,9 +258,6 @@ a {
   display: block;
   padding: 10px;
   text-transform: uppercase;
-}
-.site-header .contact-navigation .contact-dropdown ul li a:hover {
-  color: #c20040;
 }
 .site-header .contact-navigation:hover .contact-button svg {
   transform: rotate(180deg);
@@ -293,9 +284,18 @@ a {
   .site-header {
     padding: 35px 30px;
   }
+  .site-header .open-full-menu-button:hover {
+    opacity: 0.7;
+  }
   .site-header .site-branding {
     top: 35px;
     width: 217px;
+  }
+  .site-header .contact-navigation .contact-button:hover {
+    opacity: 0.7;
+  }
+  .site-header .contact-navigation .contact-dropdown ul li a:hover {
+    color: #c20040;
   }
   .site-header.is-sticky {
     padding: 16px 30px;
@@ -370,9 +370,6 @@ a {
   height: 12px;
   width: 2px;
 }
-.full-navigation-menu ul > li:hover {
-  color: #c20040;
-}
 .full-navigation-menu ul > li ul {
   bottom: 0;
   left: -100%;
@@ -420,10 +417,6 @@ a {
 .full-navigation-menu .full-navigation-submenu-close-button span {
   margin-top: 5px;
 }
-.full-navigation-menu .full-navigation-menu-close-button:hover,
-.full-navigation-menu .full-navigation-submenu-close-button:hover {
-  color: #c20040;
-}
 .full-navigation-menu .full-navigation-submenu-close-button {
   display: none;
   left: auto;
@@ -448,6 +441,9 @@ a {
     padding: 90px 60px;
     width: 50vw;
   }
+  .full-navigation-menu ul > li:hover {
+    color: #c20040;
+  }
   .full-navigation-menu ul > li ul {
     box-shadow: none;
     left: -30%;
@@ -461,6 +457,10 @@ a {
 .full-navigation-menu .full-navigation-submenu-close-button {
     left: 35px;
     top: 35px;
+  }
+  .full-navigation-menu .full-navigation-menu-close-button:hover,
+.full-navigation-menu .full-navigation-submenu-close-button:hover {
+    color: #c20040;
   }
   .full-navigation-menu .full-navigation-submenu-close-button {
     left: auto;

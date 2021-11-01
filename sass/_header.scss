@@ -35,10 +35,6 @@
     span {
       margin-top: 5px;
     }
-
-    &:hover {
-      opacity: 0.7;
-    }
   }
 
   .scroll-progress {
@@ -104,10 +100,6 @@
       span {
         margin-top: 2px;
       }
-  
-      &:hover {
-        opacity: 0.7;
-      }
     }
 
     .contact-dropdown {
@@ -128,10 +120,6 @@
             display: block;
             padding: 10px;
             text-transform: uppercase;
-      
-            &:hover {
-              color: $link-hover-color;
-            }
           }    
         }
       }
@@ -172,9 +160,35 @@
   @media only screen and (min-width: 769px) {
     padding: 35px 30px;
 
+    .open-full-menu-button {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
     .site-branding {
       top: 35px;
       width: 217px;
+    }
+
+    .contact-navigation {
+      .contact-button {
+        &:hover {
+          opacity: 0.7;
+        }  
+      }
+
+      .contact-dropdown {
+        ul {
+          li {
+            a {
+              &:hover {
+                color: $link-hover-color;
+              }      
+            }
+          }
+        }
+      }
     }
 
     &.is-sticky {

@@ -61,10 +61,6 @@
         }
       }
 
-      &:hover {
-        color: $link-hover-color;
-      }
-
       ul {
         bottom: 0;
         left: -100%;
@@ -120,10 +116,6 @@
     span {
       margin-top: 5px;
     }
-
-    &:hover {
-      color: $link-hover-color;
-    }
   }
 
   .full-navigation-submenu-close-button {
@@ -153,6 +145,10 @@
       width: 50vw;
 
       & > li {
+        &:hover {
+          color: $link-hover-color;
+        }
+
         ul {
           box-shadow: none;
           left: -30%;
@@ -172,6 +168,10 @@
     .full-navigation-submenu-close-button {
       left: 35px;
       top: 35px;
+
+      &:hover {
+        color: $link-hover-color;
+      }
     }
   
     .full-navigation-submenu-close-button {
