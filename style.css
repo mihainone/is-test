@@ -1,0 +1,471 @@
+@font-face {
+  font-family: "TrajanProRegular";
+  src: url("fonts/TrajanProRegular.eot");
+  src: url("fonts/TrajanProRegular.eot?#iefix") format("embedded-opentype"), url("fonts/TrajanProRegular.woff") format("woff"), url("fonts/TrajanProRegular.ttf") format("truetype");
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: "TrajanProRegular", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-content {
+  height: 400vh;
+}
+
+.site-header {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 25px 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.3s;
+}
+.site-header .site-branding {
+  left: 50%;
+  position: absolute;
+  top: 25px;
+  transform: translateX(-50%);
+  width: 107px;
+}
+.site-header .open-full-menu-button {
+  align-items: center;
+  color: currentColor;
+  display: flex;
+  font-family: "TrajanProRegular", serif;
+  font-size: 18px;
+  line-height: 18px;
+  transition: opacity 0.3s;
+}
+.site-header .open-full-menu-button svg {
+  fill: currentColor;
+  margin-right: 10px;
+}
+.site-header .open-full-menu-button span {
+  margin-top: 5px;
+}
+.site-header .open-full-menu-button:hover {
+  opacity: 0.7;
+}
+.site-header .scroll-progress {
+  align-items: center;
+  border-radius: 50%;
+  display: none;
+  height: 34px;
+  justify-content: center;
+  left: 139px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+}
+.site-header .scroll-progress .scroll-progress-value {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
+.site-header .share-button {
+  color: currentColor;
+  display: none;
+  height: 20px;
+  left: 145px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.site-header .share-button svg {
+  fill: currentColor;
+  width: 18px;
+}
+.site-header .contact-navigation {
+  display: flex;
+  height: 100%;
+  padding: 0 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.site-header .contact-navigation .contact-button {
+  align-items: center;
+  color: currentColor;
+  display: flex;
+  font-family: "TrajanProRegular", serif;
+  font-size: 14px;
+  line-height: 14px;
+  transition: opacity 0.3s;
+}
+.site-header .contact-navigation .contact-button svg {
+  stroke: currentColor;
+  margin-left: 7px;
+  width: 14px;
+  transition: all 0.3s;
+}
+.site-header .contact-navigation .contact-button span {
+  margin-top: 2px;
+}
+.site-header .contact-navigation .contact-button:hover {
+  opacity: 0.7;
+}
+.site-header .contact-navigation .contact-dropdown {
+  background-color: rgba(245, 246, 246, 0.7);
+  display: none;
+  padding: 20px 30px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 100%;
+}
+.site-header .contact-navigation .contact-dropdown ul li {
+  font-size: 12px;
+}
+.site-header .contact-navigation .contact-dropdown ul li a {
+  color: #606060;
+  display: block;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.site-header .contact-navigation .contact-dropdown ul li a:hover {
+  color: #c20040;
+}
+.site-header .contact-navigation:hover .contact-button svg {
+  transform: rotate(180deg);
+}
+.site-header .contact-navigation:hover .contact-dropdown {
+  display: block;
+}
+.site-header.is-sticky {
+  background-color: #fff;
+  color: #0c0c0c;
+  padding: 16px 20px;
+  position: fixed;
+}
+.site-header.is-sticky .site-branding {
+  display: none;
+}
+.site-header.is-sticky .scroll-progress {
+  display: flex;
+}
+.site-header.is-sticky .share-button {
+  display: block;
+}
+@media only screen and (min-width: 769px) {
+  .site-header {
+    padding: 35px 30px;
+  }
+  .site-header .site-branding {
+    top: 35px;
+    width: 217px;
+  }
+  .site-header.is-sticky {
+    padding: 16px 30px;
+  }
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+}
+.intro img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
+  width: 100%;
+}
+
+.full-navigation-menu {
+  background-color: rgba(243, 243, 243, 0.8);
+  bottom: 0;
+  left: -110%;
+  position: fixed;
+  top: 0;
+  width: 80%;
+  transition: all 0.6s;
+}
+.full-navigation-menu ul {
+  background-color: #fff;
+  box-shadow: 0px 1px 29.7px 0.3px rgba(1, 1, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 60px 30px;
+  width: 90vw;
+}
+.full-navigation-menu ul > li {
+  border-bottom: solid 1px #e8b8c2;
+  color: #464646;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+.full-navigation-menu ul > li a {
+  color: currentColor;
+  display: block;
+}
+.full-navigation-menu ul > li span {
+  display: block;
+  font-size: 20px;
+  position: relative;
+  width: 12px;
+}
+.full-navigation-menu ul > li span:before, .full-navigation-menu ul > li span:after {
+  background-color: currentColor;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+}
+.full-navigation-menu ul > li span:before {
+  height: 2px;
+  width: 12px;
+}
+.full-navigation-menu ul > li span:after {
+  height: 12px;
+  width: 2px;
+}
+.full-navigation-menu ul > li:hover {
+  color: #c20040;
+}
+.full-navigation-menu ul > li ul {
+  bottom: 0;
+  left: -100%;
+  opacity: 0;
+  padding: 60px;
+  position: absolute;
+  top: 0;
+  transition: all 0.6s;
+  z-index: 1;
+}
+.full-navigation-menu ul > li ul li {
+  border: 0;
+  font-size: 15px;
+  margin: 0;
+  padding: 10px 0;
+}
+.full-navigation-menu ul > li.open {
+  color: #c20040;
+}
+.full-navigation-menu ul > li.open span:after {
+  opacity: 0;
+}
+.full-navigation-menu ul > li.open ul {
+  left: 10%;
+  opacity: 1;
+}
+.full-navigation-menu .full-navigation-menu-close-button,
+.full-navigation-menu .full-navigation-submenu-close-button {
+  align-items: center;
+  color: #464646;
+  display: flex;
+  font-family: "TrajanProRegular", serif;
+  font-size: 18px;
+  line-height: 18px;
+  left: 25px;
+  position: absolute;
+  top: 25px;
+}
+.full-navigation-menu .full-navigation-menu-close-button svg,
+.full-navigation-menu .full-navigation-submenu-close-button svg {
+  fill: currentColor;
+  margin-right: 10px;
+}
+.full-navigation-menu .full-navigation-menu-close-button span,
+.full-navigation-menu .full-navigation-submenu-close-button span {
+  margin-top: 5px;
+}
+.full-navigation-menu .full-navigation-menu-close-button:hover,
+.full-navigation-menu .full-navigation-submenu-close-button:hover {
+  color: #c20040;
+}
+.full-navigation-menu .full-navigation-submenu-close-button {
+  display: none;
+  left: auto;
+  right: 25px;
+  z-index: 1;
+}
+.full-navigation-menu .full-navigation-submenu-close-button svg {
+  margin-right: 0;
+}
+.full-navigation-menu.open {
+  left: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 769px) {
+  .full-navigation-menu {
+    left: -60%;
+    position: fixed;
+    top: 0;
+    width: 50%;
+  }
+  .full-navigation-menu ul {
+    padding: 90px 60px;
+    width: 50vw;
+  }
+  .full-navigation-menu ul > li ul {
+    box-shadow: none;
+    left: -30%;
+    padding: 90px;
+    z-index: -1;
+  }
+  .full-navigation-menu ul > li.open ul {
+    left: 50%;
+  }
+  .full-navigation-menu .full-navigation-menu-close-button,
+.full-navigation-menu .full-navigation-submenu-close-button {
+    left: 35px;
+    top: 35px;
+  }
+  .full-navigation-menu .full-navigation-submenu-close-button {
+    left: auto;
+    right: 35px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
